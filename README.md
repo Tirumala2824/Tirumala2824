@@ -21,8 +21,8 @@ My work is evolving from analytical experiments and learning projects toward pro
 | [Data Cleaning](https://github.com/Tirumala2824/Data-Cleaning) | Reusable preprocessing work that separates transformation logic from the interactive data-analysis experience. |
 | [Dynamic Portfolio Website](https://github.com/Tirumala2824/Dynamic-Portfolio-Website) | Web application work covering presentation, routing, templates, configuration, and deployment readiness. |
 | [Next.js Blog Theme](https://github.com/Tirumala2824/nextjs-blog-theme) | Frontend and content-system work with reusable components, MDX content, visual polish, and reproducible builds. |
-| [Document Sentinel](https://github.com/Tirumala2824/doc-sentinel-powerful-wave-7yzk) | Document-oriented AI application direction: ingestion, knowledge workflows, structured responses, and secure product boundaries. |
-| [Voice Harvest](https://github.com/Tirumala2824/voice-harvest-clean-grid-xj5u) | Voice-oriented AI application direction: real-time audio interaction, agent workflows, browser capabilities, and resilient user experience. |
+| **Document Sentinel** *(private product work)* | Document-oriented AI application direction: ingestion, knowledge workflows, structured responses, and secure product boundaries. |
+| **Voice Harvest** *(private product work)* | Voice-oriented AI application direction: real-time audio interaction, agent workflows, browser capabilities, and resilient user experience. |
 
 ## How I build
 
