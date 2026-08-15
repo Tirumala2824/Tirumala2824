@@ -1,37 +1,40 @@
 # Hi, I’m Pitani Durga Prasad
 
-I’m a software and AI engineer focused on turning data, automation, and intelligent interfaces into maintainable products.
+I am a software and AI engineer focused on turning data, automation, and intelligent interfaces into maintainable products. My work spans machine-learning foundations, Python and web application engineering, analytical systems, and private AI product development.
 
-My work is evolving from analytical experiments and learning projects toward production-oriented systems with explicit architecture, secure configuration, automated tests, observable workflows, and documentation that another engineer can use without guesswork.
+I care about the engineering details that make software dependable: explicit architecture, secure configuration, typed and testable boundaries, reproducible development, useful documentation, and continuous improvement rather than one-off demos.
 
-## Engineering focus
+## Engineering direction
 
-- **Applied AI and data products:** model evaluation, data cleaning, feature pipelines, dashboards, and reproducible experiments.
-- **Backend and platform engineering:** Python, Django, FastAPI, REST APIs, Celery-style background work, persistence, and deployment concerns.
-- **AI-enabled applications:** retrieval and document workflows, voice interfaces, agent boundaries, structured responses, and human-in-the-loop behavior.
-- **Developer experience:** clean repository structure, typed interfaces, testable modules, CI/CD, security hygiene, semantic versioning, and clear technical writing.
+| Area | What I build and learn |
+|---|---|
+| Applied AI and machine learning | Classification, computer vision, evaluation, data preparation, and reproducible experiments |
+| Backend and application engineering | Python, Django, FastAPI, REST APIs, persistence, background work, and service boundaries |
+| AI-enabled products | Document workflows, retrieval-oriented applications, voice interaction, structured responses, and human review paths |
+| Developer experience | CI/CD, dependency hygiene, semantic versioning, architecture notes, security policies, and reviewable changes |
 
 ## Selected work
 
-| Project | Engineering story |
-|---|---|
-| [Revenue Performance Dashboard](https://github.com/Tirumala2824/hector_beverages_revenue_dashboard) | FastAPI and analytical data product for revenue trends, growth analysis, segmentation, and business-facing dashboards. |
-| [Crypto Scraper](https://github.com/Tirumala2824/Crypto-Scraper) | Django REST and Celery system that explores asynchronous work, browser automation, scraping boundaries, status tracking, and failure handling. |
-| [CNN Bottle Defect Evaluation](https://github.com/Tirumala2824/Comparative-Evaluation-Of-CNN-based-Models-For-Bottle-Defect-Detection-In-Industrial-Manufacturing) | Comparative computer-vision research project focused on experimental design, evaluation, reproducibility, and industrial limitations. |
-| [Data Cleaning](https://github.com/Tirumala2824/Data-Cleaning) | Reusable preprocessing work that separates transformation logic from the interactive data-analysis experience. |
-| [Dynamic Portfolio Website](https://github.com/Tirumala2824/Dynamic-Portfolio-Website) | Web application work covering presentation, routing, templates, configuration, and deployment readiness. |
-| [Next.js Blog Theme](https://github.com/Tirumala2824/nextjs-blog-theme) | Frontend and content-system work with reusable components, MDX content, visual polish, and reproducible builds. |
-| **Document Sentinel** *(private product work)* | Document-oriented AI application direction: ingestion, knowledge workflows, structured responses, and secure product boundaries. |
-| **Voice Harvest** *(private product work)* | Voice-oriented AI application direction: real-time audio interaction, agent workflows, browser capabilities, and resilient user experience. |
+| Project | Engineering story | Status |
+|---|---|---|
+| [Revenue Performance Dashboard](https://github.com/Tirumala2824/revenue_dashboard) | FastAPI, pandas, analytical services, validated data contracts, server-rendered dashboards, and tested business metrics | Active public showcase |
+| [Question and Answer](https://github.com/Tirumala2824/Question_and_Answer) | Web-application structure, question-generation workflows, templates, persistence, and testable repository boundaries | Active application project |
+| [CRUD Operations](https://github.com/Tirumala2824/CRUD-Operations) | Python application fundamentals, CRUD behavior, data contracts, repository structure, and CI quality gates | Remediation in progress |
+| [Cross-sell Prediction](https://github.com/Tirumala2824/Cross-sell-prediction) | Classification experiments, model comparison, data contracts, and the transition from scripts to reproducible ML work | Public ML project |
+| [Email Spam Detection](https://github.com/Tirumala2824/Email-Spam-Detection) | Applied text classification with a focus on evaluation, data provenance, and reproducibility | Public ML project |
+| [Crypto Scraper](https://github.com/Tirumala2824/Crypto-Scraper) | Django REST, Celery-style asynchronous work, Selenium boundaries, scraping status, and failure handling | Legacy prototype |
+| [CNN Bottle Defect Evaluation](https://github.com/Tirumala2824/Comparative-Evaluation-Of-CNN-based-Models-For-Bottle-Defect-Detection-In-Industrial-Manufacturing) | Comparative computer-vision research with explicit evaluation and industrial limitations | Research archive |
+| **Document Sentinel** | Private document-oriented AI product work covering ingestion, knowledge workflows, structured responses, and secure data boundaries | Private active work |
+| **Voice Harvest** | Private voice-AI product work covering browser audio, real-time sessions, agent workflows, and resilient user experience | Private active work |
 
 ## How I build
 
-I prefer small, composable modules over monoliths; explicit boundaries over hidden coupling; secure configuration over committed secrets; tests that protect behavior over superficial coverage; and documentation that explains decisions, trade-offs, and operational reality.
+I prefer small, composable modules over hidden coupling; explicit boundaries over framework leakage; environment-based configuration over committed secrets; tests that protect behavior over superficial coverage; and documentation that explains decisions, trade-offs, and operational reality.
 
-Every maintained repository is being aligned around a common baseline: a clear README, reproducible setup, environment-variable documentation, architecture notes, tests, code quality checks, security policy, dependency automation, CI/CD, semantic releases where appropriate, and reviewable pull requests.
+Maintained repositories follow a common baseline: a precise README, architecture notes, reproducible setup, security guidance, tests, CI checks, dependency updates, changelog discipline, and semantic versioning when a project exposes a user-facing interface or reusable package. Older learning and academic repositories remain available as clearly labeled history rather than being presented as production systems.
 
-## Current direction
+## Current progression
 
-I am consolidating the profile around a coherent progression: data and machine-learning foundations, production-minded Python and web systems, AI-enabled product engineering, and continuous improvement of reliability, security, and developer experience.
+My portfolio is intentionally organized as a progression: foundational machine-learning and academic work; production-minded Python and web applications; public analytical products; and private AI product engineering. This structure is designed to grow as new projects are added without losing consistency or overstating maturity.
 
-For collaboration, please open an issue or pull request in the relevant repository with a reproducible description, clear scope, and validation evidence.
+For collaboration, please open an issue or pull request in the relevant repository with a reproducible description, focused scope, and validation evidence.
