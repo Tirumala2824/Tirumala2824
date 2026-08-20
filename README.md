@@ -13,6 +13,14 @@ I care about the engineering details that make software dependable: explicit arc
 | AI-enabled products | Document workflows, retrieval-oriented applications, voice interaction, structured responses, and human review paths |
 | Developer experience | CI/CD, dependency hygiene, semantic versioning, architecture notes, security policies, and reviewable changes |
 
+## Featured recent project
+
+| Project | Engineering story | Status |
+|---|---|---|
+| [Contract Risk Analyzer](https://github.com/Tirumala2824/contract-risk-analyzer) | FastAPI, static web UI, document ingestion, six-domain contract analysis, deterministic and multi-judge scoring, confidence-aware decisions, MongoDB-oriented persistence, audit records, and repository hygiene checks | Private engineering snapshot |
+
+Contract Risk Analyzer is an explainable contract-review workflow rather than a black-box classifier. Its supplied enterprise policy defines Legal, Compliance, Financial, Operational, Security, and Fraud categories, with rule, template, Bayesian, and optional LLM judges contributing to the final score. The repository includes architecture notes, a scoring-policy summary, the authoritative policy PDF, a demo video, and a GitHub Actions hygiene workflow.
+
 ## Selected work
 
 | Project | Engineering story | Status |
@@ -35,6 +43,6 @@ Maintained repositories follow a common baseline: a precise README, architecture
 
 ## Current progression
 
-My portfolio is intentionally organized as a progression: foundational machine-learning and academic work; production-minded Python and web applications; public analytical products; and private AI product engineering. This structure is designed to grow as new projects are added without losing consistency or overstating maturity.
+My portfolio is intentionally organized as a progression: foundational machine-learning and academic work; production-minded Python and web applications; public analytical products; and private AI product engineering. Contract Risk Analyzer extends that progression into explainable, policy-driven document intelligence with explicit human-review boundaries.
 
 For collaboration, please open an issue or pull request in the relevant repository with a reproducible description, focused scope, and validation evidence.
