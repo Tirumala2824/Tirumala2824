@@ -1,0 +1,30 @@
+name: Resume Quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-resume:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: docs/resume/ai-engineer-resume.tex
+          latexmk_use_xelatex: false
+
+      - name: Confirm one-page output
+        shell: bash
+        run: |
+          pages=$(pdfinfo docs/resume/ai-engineer-resume.pdf | awk '/^Pages:/ {print $2}')
+          test "$pages" = "1"
+          echo "Resume page count: $pages"

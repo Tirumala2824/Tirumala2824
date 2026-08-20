@@ -1,0 +1,114 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.45in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Custom Colors
+\definecolor{primary}{RGB}{11, 71, 116}
+\definecolor{secondary}{RGB}{44, 62, 80}
+
+% Hyperlink Setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    filecolor=primary,
+    urlcolor=primary,
+    pdftitle={Tirumala Venkata Durga Prasad Pitani - AI Engineer Resume},
+}
+
+% Page style
+\pagestyle{empty}
+
+% Section formatting
+\titleformat{\section}[block]{\large\bfseries\color{primary}}{}{0em}{}[\vspace{-0.6em}\rule{\textwidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{0.3em}{0.1em}
+
+% Better line spacing
+\renewcommand{\baselinestretch}{0.98}
+
+% Reduce list spacing globally
+\setlist{leftmargin=*, itemsep=0.5pt, topsep=0.5pt, partopsep=0pt, parsep=0pt}
+
+\begin{document}
+
+% Title Section
+\begin{center}
+    \vspace*{-0.8cm}
+    {\LARGE \textbf{\color{primary}Tirumala Venkata Durga Prasad Pitani}} \\[0.3em]
+    \textbf{AI Engineer | Agentic AI | Generative AI | Enterprise Automation} \\[0.2em]
+    Bengaluru, India \textbullet\ +91 9110784569 \textbullet\ ptvdprasad121@gmail.com \\[0.1em]
+    \href{https://linkedin.com/in/tirumala569}{linkedin.com/in/tirumala569} \textbullet\ \href{https://github.com/Tirumala2824}{github.com/Tirumala2824}
+\end{center}
+
+\vspace{-0.8em}
+
+\section*{Professional Summary}
+AI Engineer with 2+ years of experience specializing in Generative AI, agentic workflows, and enterprise automation. Proven track record of designing and deploying production-ready LLM applications, RAG systems, and intelligent agents on Microsoft Azure. Adept at transforming complex business requirements into scalable, secure AI solutions that drive measurable impact, such as reducing manual processing time by 50\% and serving thousands of users with high-accuracy NL-to-SQL capabilities. Recognized innovator with top finishes in multiple enterprise AI hackathons.
+
+\section*{Technical Skills}
+\begin{itemize}
+    \item \textbf{Generative AI \& Agents:} Azure OpenAI, LangChain, LangGraph, LlamaIndex, ReAct Agents, Tool-Use Agents, Multi-Agent Orchestration, Prompt Engineering, Structured Outputs
+    \item \textbf{RAG \& Search:} FAISS, ChromaDB, Pinecone, Embeddings, Vector Search, Semantic Chunking, Hybrid Retrieval, Grounding, NL-to-SQL
+    \item \textbf{Programming \& APIs:} Python (Async), SQL, Pandas, NumPy, FastAPI, Django REST Framework, JWT, RBAC
+    \item \textbf{Cloud \& Data Platforms:} Microsoft Azure, Azure Fabric, Azure Data Factory, Azure ML Studio, Databricks, PySpark
+    \item \textbf{MLOps \& DevOps:} MLflow, Scikit-Learn, XGBoost, Docker, CI/CD (Azure DevOps), Automated Testing
+\end{itemize}
+
+\section*{Professional Experience}
+
+\textbf{Data Engineer / AI Engineer} \hfill NTT DATA Business Solutions \\
+\textit{October 2024 -- Present \hfill Bengaluru, India}
+\begin{itemize}
+    \item Designed and deployed an \textbf{LLM-powered enterprise analytics copilot} using LangChain and FAISS, enabling natural-language queries against governed lakehouse data with \textbf{85\% NL-to-SQL accuracy}, reducing manual analyst effort by \textbf{50\%}.
+    \item Developed reusable AI components (prompt construction, retrieval, SQL generation, validation) to accelerate enterprise AI adoption, supporting maintainable and scalable multi-agent workflows.
+    \item Built AI-ready data infrastructure on \textbf{Azure Fabric} using PySpark, processing 50+ GB of daily supply-chain data through Medallion Architecture; optimized Delta Lake workloads, improving query performance by \textbf{45\%}.
+    \item Engineered 15+ automated ETL/ELT pipelines in \textbf{Azure Data Factory} with dynamic parameterization and data-quality validation, achieving \textbf{99.8\% on-time delivery} for critical business reporting.
+\end{itemize}
+
+\textbf{Data Science Intern} \hfill Viai Solutions Pvt Ltd \\
+\textit{July 2024 -- August 2024 \hfill Hyderabad, India}
+\begin{itemize}
+    \item Developed automated Python data-ingestion workflows (Selenium, BeautifulSoup) to extract and transform unstructured web data into Parquet datasets, reducing manual collection effort by \textbf{40\%}.
+    \item Processed and validated 100K+ student records using PySpark, improving data quality from \textbf{72\% to 96\%}.
+\end{itemize}
+
+\textbf{Python Developer} \hfill Dhanush Infotech Pvt Ltd \\
+\textit{January 2024 -- June 2024 \hfill Hyderabad, India}
+\begin{itemize}
+    \item Developed scalable Django REST Framework microservices with JWT authentication and role-based access control, supporting 10K+ daily API requests with \textbf{99.9\% uptime}.
+    \item Optimized SQL schemas and query execution plans, improving API response times by \textbf{20\%} and reducing database CPU utilization by \textbf{30\%}.
+\end{itemize}
+
+\section*{Key Projects}
+
+\textbf{Enterprise AI Analytics Copilot} \hfill \textit{LangChain, FAISS, Azure Fabric, PySpark, SQL}
+\begin{itemize}
+    \item Built a GenAI copilot combining RAG, vector retrieval, and context grounding to enable secure, self-service natural language querying of curated Gold-layer enterprise datasets.
+    \item Implemented validation-oriented SQL generation workflows to ensure response accuracy and reliability.
+\end{itemize}
+
+\textbf{Cross-Sell Prediction System} \hfill \textit{Python, Scikit-Learn, Pandas, MLflow}
+\begin{itemize}
+    \item Engineered a machine learning pipeline to predict customer cross-sell opportunities, utilizing Logistic Regression and Support Vector Machines to analyze customer behavior patterns.
+    \item Implemented comprehensive data preprocessing, feature engineering, and model evaluation metrics (ROC-AUC), deploying the solution to identify high-probability conversion targets and optimize marketing workflows.
+\end{itemize}
+
+\section*{Achievements \& Certifications}
+\begin{itemize}
+    \item \textbf{1st Place} -- Business AI Challenge 2026 (Cohort 1); \textbf{3rd Position} -- JouleXet 2025 AI Hackathon
+    \item \textbf{Certifications:} Microsoft Certified: Fabric Data Engineer Associate (DP-700), Azure AI Fundamentals (AI-900)
+    \item \textbf{Publication:} "CNN-based Industrial Defect Detection System" (94\% detection accuracy)
+\end{itemize}
+
+\section*{Education}
+\textbf{B.Tech (Computer Science and Engineering)} \hfill IIIT Manipur \hfill 2020--2024
+
+\end{document}

@@ -21,6 +21,10 @@ I care about the engineering details that make software dependable: explicit arc
 
 Contract Risk Analyzer is an explainable contract-review workflow rather than a black-box classifier. Its supplied enterprise policy defines Legal, Compliance, Financial, Operational, Security, and Fraud categories, with rule, template, Bayesian, and optional LLM judges contributing to the final score. The repository includes architecture notes, a scoring-policy summary, the authoritative policy PDF, a demo video, and a GitHub Actions hygiene workflow.
 
+## Resume
+
+The current one-page [AI Engineer resume](docs/resume/ai-engineer-resume.pdf) is tailored to AI agent creation, Generative AI, RAG, NL-to-SQL, and enterprise automation. The editable [LaTeX source](docs/resume/ai-engineer-resume.tex) is included for future updates.
+
 ## Selected work
 
 | Project | Engineering story | Status |
@@ -28,7 +32,7 @@ Contract Risk Analyzer is an explainable contract-review workflow rather than a 
 | [Revenue Performance Dashboard](https://github.com/Tirumala2824/revenue_dashboard) | FastAPI, pandas, analytical services, validated data contracts, server-rendered dashboards, and tested business metrics | Active public showcase |
 | [Question and Answer](https://github.com/Tirumala2824/Question_and_Answer) | Web-application structure, question-generation workflows, templates, persistence, and testable repository boundaries | Active application project |
 | [CRUD Operations](https://github.com/Tirumala2824/CRUD-Operations) | Python application fundamentals, CRUD behavior, data contracts, repository structure, and CI quality gates | Remediation in progress |
-| [Cross-sell Prediction](https://github.com/Tirumala2824/Cross-sell-prediction) | Classification experiments, model comparison, data contracts, and the transition from scripts to reproducible ML work | Public ML project |
+| [Cross-sell Prediction](https://github.com/Tirumala2824/Cross-sell-prediction) | Applied ML project using Logistic Regression and SVM model comparison, ROC-AUC evaluation, reusable preprocessing, and a reproducible path from customer behavior data to cross-sell targeting | Public ML project |
 | [Email Spam Detection](https://github.com/Tirumala2824/Email-Spam-Detection) | Applied text classification with a focus on evaluation, data provenance, and reproducibility | Public ML project |
 | [Crypto Scraper](https://github.com/Tirumala2824/Crypto-Scraper) | Django REST, Celery-style asynchronous work, Selenium boundaries, scraping status, and failure handling | Legacy prototype |
 | [CNN Bottle Defect Evaluation](https://github.com/Tirumala2824/Comparative-Evaluation-Of-CNN-based-Models-For-Bottle-Defect-Detection-In-Industrial-Manufacturing) | Comparative computer-vision research with explicit evaluation and industrial limitations | Research archive |
@@ -43,6 +47,6 @@ Maintained repositories follow a common baseline: a precise README, architecture
 
 ## Current progression
 
-My portfolio is intentionally organized as a progression: foundational machine-learning and academic work; production-minded Python and web applications; public analytical products; and private AI product engineering. Contract Risk Analyzer extends that progression into explainable, policy-driven document intelligence with explicit human-review boundaries.
+My portfolio is intentionally organized as a progression: foundational machine-learning and academic work; production-minded Python and web applications; public analytical products; and private AI product engineering. Contract Risk Analyzer extends that progression into explainable, policy-driven document intelligence with explicit human-review boundaries. The attached resume presents this work alongside the Cross-Sell Prediction project as evidence of both agentic AI and applied machine-learning breadth.
 
 For collaboration, please open an issue or pull request in the relevant repository with a reproducible description, focused scope, and validation evidence.
