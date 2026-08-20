@@ -1,6 +1,6 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.45in]{geometry}
+\usepackage[margin=0.40in]{geometry}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{titlesec}
@@ -28,27 +28,27 @@
 \pagestyle{empty}
 
 % Section formatting
-\titleformat{\section}[block]{\large\bfseries\color{primary}}{}{0em}{}[\vspace{-0.6em}\rule{\textwidth}{0.4pt}]
-\titlespacing*{\section}{0pt}{0.3em}{0.1em}
+\titleformat{\section}[block]{\large\bfseries\color{primary}}{}{0em}{}[\vspace{-0.7em}\rule{\textwidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{0.2em}{0.1em}
 
 % Better line spacing
-\renewcommand{\baselinestretch}{0.98}
+\renewcommand{\baselinestretch}{0.95}
 
 % Reduce list spacing globally
-\setlist{leftmargin=*, itemsep=0.5pt, topsep=0.5pt, partopsep=0pt, parsep=0pt}
+\setlist{leftmargin=*, itemsep=0pt, topsep=0pt, partopsep=0pt, parsep=0pt}
 
 \begin{document}
 
 % Title Section
 \begin{center}
-    \vspace*{-0.8cm}
+    \vspace*{-1.0cm}
     {\LARGE \textbf{\color{primary}Tirumala Venkata Durga Prasad Pitani}} \\[0.3em]
     \textbf{AI Engineer | Agentic AI | Generative AI | Enterprise Automation} \\[0.2em]
     Bengaluru, India \textbullet\ +91 9110784569 \textbullet\ ptvdprasad121@gmail.com \\[0.1em]
     \href{https://linkedin.com/in/tirumala569}{linkedin.com/in/tirumala569} \textbullet\ \href{https://github.com/Tirumala2824}{github.com/Tirumala2824}
 \end{center}
 
-\vspace{-0.8em}
+\vspace{-1.0em}
 
 \section*{Professional Summary}
 I am an AI Engineer focused on turning foundation models into reliable enterprise automations. My work centers on designing agentic planning architectures, advanced RAG pipelines, and multi-agent workflows that solve complex business problems. I enjoy exploring fine-tuning strategies to adapt models to specific domains, and I build robust, scalable solutions across major cloud environments—primarily Azure, with complementary experience in GCP, AWS, and Snowflake. I care deeply about bridging the gap between experimental AI and production reality through explicit evaluation, human-in-the-loop design, and maintainable software engineering.
@@ -65,37 +65,42 @@ I am an AI Engineer focused on turning foundation models into reliable enterpris
 \section*{Professional Experience}
 
 \textbf{Data Engineer / AI Engineer} \hfill NTT DATA Business Solutions \\
-\textit{October 2024 -- Present \hfill Bengaluru, India}
+\textit{October 2024 -- Present \hfill Bengaluru, India} \\
+\textit{Primary Tools: Azure OpenAI, LangChain, FAISS, Azure Fabric, PySpark, Azure Data Factory}
 \begin{itemize}
-    \item Designed and deployed an LLM-powered enterprise analytics copilot using LangChain and FAISS, enabling secure natural-language queries against governed lakehouse data.
+    \item Designed and deployed an LLM-powered enterprise analytics copilot, enabling secure natural-language queries against governed lakehouse data to streamline business intelligence workflows.
     \item Developed reusable AI components for prompt construction, retrieval, SQL generation, and validation, accelerating the adoption of maintainable multi-agent workflows across the enterprise.
-    \item Built AI-ready data infrastructure on Azure Fabric using PySpark, processing daily supply-chain data through Medallion Architecture and optimizing Delta Lake workloads for downstream RAG consumption.
+    \item Built AI-ready data infrastructure on Azure Fabric, processing daily supply-chain data through Medallion Architecture and optimizing Delta Lake workloads for downstream RAG consumption.
     \item Engineered automated ETL pipelines in Azure Data Factory with dynamic parameterization and data-quality validation to ensure reliable reporting and grounding data.
 \end{itemize}
 
 \textbf{Data Science Intern} \hfill Viai Solutions Pvt Ltd \\
-\textit{July 2024 -- August 2024 \hfill Hyderabad, India}
+\textit{July 2024 -- August 2024 \hfill Hyderabad, India} \\
+\textit{Primary Tools: Python, PySpark, Selenium, BeautifulSoup, Pandas}
 \begin{itemize}
-    \item Developed automated Python data-ingestion workflows (Selenium, BeautifulSoup) to extract and transform unstructured web data into Parquet datasets, reducing manual collection effort by \textbf{40\%}.
-    \item Processed and validated 100K+ student records using PySpark, improving data quality from \textbf{72\% to 96\%}.
+    \item Developed automated Python data-ingestion workflows to extract and transform unstructured web data into Parquet datasets, significantly reducing manual collection effort.
+    \item Processed and validated over 100K student records using PySpark, establishing rigorous data quality rules that dramatically improved dataset reliability.
 \end{itemize}
 
 \textbf{Python Developer} \hfill Dhanush Infotech Pvt Ltd \\
-\textit{January 2024 -- June 2024 \hfill Hyderabad, India}
+\textit{January 2024 -- June 2024 \hfill Hyderabad, India} \\
+\textit{Primary Tools: Python, Django REST Framework, SQL, JWT}
 \begin{itemize}
-    \item Developed scalable Django REST Framework microservices with JWT authentication and role-based access control, supporting 10K+ daily API requests with \textbf{99.9\% uptime}.
-    \item Optimized SQL schemas and query execution plans, improving API response times by \textbf{20\%} and reducing database CPU utilization by \textbf{30\%}.
+    \item Developed scalable microservices with JWT authentication and role-based access control, supporting thousands of daily API requests with high availability.
+    \item Optimized SQL schemas and query execution plans, improving API response times and reducing database CPU utilization.
 \end{itemize}
 
 \section*{Key Projects}
 
-\textbf{\href{https://github.com/Tirumala2824/contract-risk-analyzer}{Contract Risk Analyzer}} \hfill \textit{FastAPI, Multi-Agent Orchestration, RAG, MongoDB}
+\textbf{\href{https://github.com/Tirumala2824/contract-risk-analyzer}{Contract Risk Analyzer}} \hfill \href{https://github.com/Tirumala2824/contract-risk-analyzer}{github.com/Tirumala2824/contract-risk-analyzer} \\
+\textit{Primary Tools: FastAPI, Multi-Agent Orchestration, RAG, MongoDB, Python}
 \begin{itemize}
     \item Developed an explainable contract-review automation that replaces black-box classification with an agentic planning architecture. The system orchestrates category-specific agents (Legal, Financial, Security) to analyze documents against enterprise policies.
     \item Engineered a multi-judge scoring engine combining rule-based, template, Bayesian, and LLM judges to calculate confidence-aware risk scores, demonstrating practical human-in-the-loop AI product design.
 \end{itemize}
 
-\textbf{\href{https://github.com/Tirumala2824/Cross-sell-prediction}{Cross-Sell Prediction System}} \hfill \textit{Python, Scikit-Learn, Pandas, MLflow}
+\textbf{\href{https://github.com/Tirumala2824/Cross-sell-prediction}{Cross-Sell Prediction System}} \hfill \href{https://github.com/Tirumala2824/Cross-sell-prediction}{github.com/Tirumala2824/Cross-sell-prediction} \\
+\textit{Primary Tools: Python, Scikit-Learn, Pandas, MLflow}
 \begin{itemize}
     \item Engineered an applied machine learning pipeline to predict customer cross-sell opportunities, evaluating Logistic Regression against Support Vector Machines using ROC-AUC metrics.
     \item Focused on reusable data preprocessing and reproducible model training, bridging the gap between raw customer behavior data and actionable marketing targets.
