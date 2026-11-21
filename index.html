@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Durga Prasad Pitani, AI engineer in Bengaluru</title>
+<meta name="description" content="Portfolio of Durga Prasad Pitani, an AI engineer in Bengaluru building retrieval, agentic and analytics systems on Azure and GCP.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f5efe3;
+    --surface: #fbf7ee;
+    --ink: #1f1c17;
+    --ink-soft: #4e483d;
+    --ink-faint: #6d6659;
+    --rule: #d8cfbc;
+    --rule-strong: #b3a88f;
+    --accent: #8c3517;
+    --accent-soft: #f0dccd;
+    --measure: 34rem;
+    --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+  }
+  html[data-theme="ink"] {
+    --paper: #16130f;
+    --surface: #1d1a15;
+    --ink: #ece4d5;
+    --ink-soft: #c3b9a6;
+    --ink-faint: #a49a86;
+    --rule: #38322a;
+    --rule-strong: #57503f;
+    --accent: #e49162;
+    --accent-soft: #33251c;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.62;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: var(--ink); text-decoration-color: var(--rule-strong); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+  a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+  button, a, summary { cursor: pointer; }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .skip {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--surface);
+    color: var(--ink);
+    padding: 0.7rem 1rem;
+    z-index: 20;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+  }
+  .skip:focus { left: 1rem; top: 1rem; }
+
+  .wrap {
+    width: 100%;
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 clamp(1.15rem, 5vw, 4rem);
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    padding-top: clamp(2.2rem, 6vw, 4rem);
+    padding-bottom: clamp(0.5rem, 1.4vw, 1rem);
+  }
+  .topbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.9rem;
+  }
+  .colophon-line {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .themes {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+  }
+  .themes span {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-right: 0.35rem;
+  }
+  .themes button {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    background: transparent;
+    border: 1px solid var(--rule);
+    padding: 0.55rem 0.75rem;
+    min-height: 44px;
+    border-radius: 2px;
+    transition: background-color 140ms ease, color 140ms ease, border-color 140ms ease;
+  }
+  .themes button:hover { border-color: var(--rule-strong); color: var(--ink); }
+  .themes button[aria-pressed="true"] {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  h1 {
+    font-size: clamp(2.9rem, 8.5vw, 6.2rem);
+    line-height: 0.96;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    margin: clamp(2rem, 5vw, 3.4rem) 0 0;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+  h1 .given { display: block; font-style: italic; font-weight: 300; color: var(--ink-soft); }
+
+  .lede {
+    font-size: clamp(1.15rem, 2.2vw, 1.42rem);
+    line-height: 1.5;
+    max-width: var(--measure);
+    margin: 1.6rem 0 0;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+
+  .contact-row {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.6rem;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+  }
+  .contact-row a { text-decoration: none; border-bottom: 1px solid var(--rule-strong); padding-bottom: 2px; }
+  .contact-row a:hover { border-color: var(--accent); }
+  .contact-row .where { color: var(--ink-faint); margin-left: auto; }
+
+  /* ---------- section frame ---------- */
+  section { padding: clamp(2.6rem, 6vw, 4.6rem) 0; }
+  .sec-head {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr;
+    gap: 0 1.5rem;
+    align-items: baseline;
+    border-top: 1px solid var(--ink);
+    padding-top: 0.85rem;
+    margin-bottom: clamp(1.6rem, 4vw, 2.6rem);
+  }
+  .sec-num {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+    padding-top: 0.35rem;
+  }
+  h2 {
+    font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+    font-weight: 400;
+    letter-spacing: -0.012em;
+    margin: 0;
+    line-height: 1.15;
+  }
+  h2 em { font-style: italic; color: var(--accent); }
+
+  p { max-width: var(--measure); margin: 0 0 1.05em; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ---------- statement ---------- */
+  .statement-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 5vw, 4rem);
+    align-items: start;
+  }
+  .pull {
+    margin: 0;
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--accent);
+    font-size: 1.12rem;
+    line-height: 1.45;
+    font-style: italic;
+    color: var(--ink);
+  }
+  .pull footer {
+    margin-top: 0.8rem;
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- work ledger ---------- */
+  .entry {
+    display: grid;
+    grid-template-columns: 4.5rem minmax(0, 1fr) minmax(0, 15rem);
+    gap: 0 clamp(1rem, 3vw, 2.2rem);
+    padding: clamp(1.5rem, 3.4vw, 2.4rem) 0;
+    border-top: 1px solid var(--rule);
+  }
+  .entry:last-of-type { border-bottom: 1px solid var(--rule); }
+  .entry-num {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    padding-top: 0.45rem;
+    letter-spacing: 0.04em;
+  }
+  .entry h3 {
+    font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.15rem;
+  }
+  .entry .kicker {
+    font-style: italic;
+    color: var(--accent);
+    font-size: 1rem;
+    margin: 0 0 0.7rem;
+  }
+  .entry p { font-size: 1rem; color: var(--ink-soft); max-width: 40rem; }
+  .entry .side {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    line-height: 1.75;
+    color: var(--ink-faint);
+    letter-spacing: 0.01em;
+  }
+  .entry .side .lab {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.63rem;
+    color: var(--ink-faint);
+    opacity: 0.85;
+    margin-bottom: 0.15rem;
+  }
+  .entry .side a { color: var(--ink); }
+  .entry .side a:hover { color: var(--accent); }
+  .entry .side .blk + .blk { margin-top: 0.85rem; }
+
+  .archive {
+    margin-top: 1.6rem;
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    line-height: 2;
+    color: var(--ink-faint);
+    max-width: 60rem;
+  }
+  .archive .lab {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.63rem;
+    margin-bottom: 0.4rem;
+  }
+  .archive a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .archive a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ---------- experience ---------- */
+  .role {
+    display: grid;
+    grid-template-columns: 11rem minmax(0, 1fr);
+    gap: 0 clamp(1rem, 3vw, 2.5rem);
+    padding: clamp(1.4rem, 3vw, 2rem) 0;
+    border-top: 1px solid var(--rule);
+  }
+  .role:first-of-type { border-top: 1px solid var(--rule); }
+  .role:last-of-type { border-bottom: 1px solid var(--rule); }
+  .role-when {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    line-height: 1.7;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+  }
+  .role h3 { font-size: 1.18rem; font-weight: 500; margin: 0; line-height: 1.3; }
+  .role .org { font-style: italic; color: var(--ink-soft); margin: 0.1rem 0 0.8rem; font-size: 1rem; }
+  ul.points { margin: 0; padding: 0; list-style: none; max-width: 42rem; }
+  ul.points li {
+    position: relative;
+    padding-left: 1.1rem;
+    margin-bottom: 0.6em;
+    font-size: 0.98rem;
+    color: var(--ink-soft);
+  }
+  ul.points li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 0.4rem;
+    height: 1px;
+    background: var(--rule-strong);
+  }
+  ul.points li:last-child { margin-bottom: 0; }
+  .metric { font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 500; }
+
+  /* ---------- stack ---------- */
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: clamp(1.4rem, 3.5vw, 2.6rem) clamp(1.5rem, 4vw, 3rem);
+  }
+  .stack-grid h3 {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .stack-grid p { font-size: 0.97rem; line-height: 1.6; color: var(--ink-soft); }
+
+  /* ---------- recognition band ---------- */
+  .band {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(1.6rem, 4vw, 3.5rem);
+  }
+  .band h3 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin: 0 0 0.7rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .band ol, .band ul { margin: 0; padding: 0; list-style: none; }
+  .band li {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.97rem;
+    color: var(--ink-soft);
+    padding: 0.35rem 0;
+  }
+  .band li .yr {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    min-width: 3.1rem;
+    padding-top: 0.18rem;
+  }
+
+  /* ---------- contact ---------- */
+  .contact h2 { font-size: clamp(1.8rem, 4.4vw, 2.9rem); }
+  .bigmail {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: clamp(1.15rem, 3.4vw, 1.9rem);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 0.1em;
+    word-break: break-word;
+  }
+  .bigmail:hover { color: var(--accent); border-color: var(--accent); }
+  .elsewhere {
+    margin-top: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.8rem;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+  }
+  .elsewhere a { text-decoration: none; border-bottom: 1px solid var(--rule-strong); padding-bottom: 2px; }
+
+  footer.colophon {
+    border-top: 1px solid var(--ink);
+    margin-top: clamp(2rem, 5vw, 3rem);
+    padding: 1.2rem 0 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 2rem;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    line-height: 1.8;
+    color: var(--ink-faint);
+    letter-spacing: 0.01em;
+  }
+  footer.colophon p { margin: 0; max-width: 40rem; }
+
+  @media (max-width: 62rem) {
+    .entry { grid-template-columns: 3.2rem minmax(0, 1fr); }
+    .entry .side { grid-column: 2; margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.85rem 1.8rem; }
+    .entry .side .blk + .blk { margin-top: 0; }
+  }
+  @media (max-width: 48rem) {
+    .statement-grid { grid-template-columns: 1fr; }
+    .band { grid-template-columns: 1fr; }
+    .role { grid-template-columns: 1fr; }
+    .role-when { display: flex; gap: 0.6rem; margin-bottom: 0.5rem; }
+    .sec-head { grid-template-columns: 1fr; gap: 0.3rem; }
+    .sec-num { padding-top: 0; }
+    .contact-row .where { margin-left: 0; width: 100%; }
+    .entry { grid-template-columns: 2.4rem minmax(0, 1fr); }
+  }
+  @media (max-width: 48rem) {
+    .contact-row a,
+    .elsewhere a,
+    .archive a,
+    footer.colophon a,
+    .entry .side a,
+    .skip {
+      display: inline-block;
+      min-height: 44px;
+      padding: 0.6rem 0;
+    }
+    .bigmail { padding: 0.4rem 0; }
+    .themes button { min-height: 44px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead wrap">
+  <div class="topbar">
+    <p class="colophon-line">AI engineer &middot; Bengaluru, India</p>
+    <div class="themes" role="group" aria-label="Page theme">
+      <span>Theme</span>
+      <button type="button" data-theme-set="paper" aria-pressed="true">Paper</button>
+      <button type="button" data-theme-set="ink" aria-pressed="false">Ink</button>
+    </div>
+  </div>
+
+  <h1><span class="given">Tirumala Venkata</span>Durga Prasad Pitani</h1>
+
+  <p class="lede">I build AI systems that hold up in production: retrieval over enterprise documents, agents that know when to hand back to a person, and analytics tools that answer questions in plain language.</p>
+
+  <nav class="contact-row" aria-label="Contact and profiles">
+    <a href="mailto:pdprasad1710@gmail.com">pdprasad1710@gmail.com</a>
+    <a href="https://github.com/Tirumala2824" rel="me noopener">github.com/Tirumala2824</a>
+    <a href="https://www.linkedin.com/in/tirumala569" rel="me noopener">LinkedIn</a>
+    <a href="docs/resume/ai-engineer-resume.pdf">R&eacute;sum&eacute; (PDF)</a>
+    <span class="where">Currently at NTT DATA Business Solutions</span>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section id="approach" aria-labelledby="approach-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <h2 id="approach-h">How I <em>work</em></h2>
+      </div>
+      <div class="statement-grid">
+        <div>
+          <p>Most of my work sits between a language model and a database that a business already trusts. That gap is where things quietly break: a query that looks right but reads the wrong column, a retrieval step that cites a document the reader cannot open, an agent that answers confidently instead of asking.</p>
+          <p>So I spend the effort on the unglamorous parts. Schema retrieval before generation, validation before the result reaches a screen, evaluation before a prompt ships, and a clear path for a human to take over. The interesting demo is the easy half.</p>
+          <p>I work in Python, mostly with Azure OpenAI, LangChain and LangGraph on the Microsoft side, and Google's ADK and Cloud Run on the GCP side. Before that I was writing Django REST APIs and cleaning student datasets, which is where I learned that data quality decides more outcomes than model choice.</p>
+        </div>
+        <blockquote class="pull">
+          &ldquo;Small, composable modules over hidden coupling. Explicit boundaries over framework leakage.&rdquo;
+          <footer>From my GitHub profile</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <h2 id="work-h">Selected <em>work</em></h2>
+      </div>
+
+      <article class="entry">
+        <span class="entry-num">01</span>
+        <div>
+          <h3>HavenDex</h3>
+          <p class="kicker">A rental operating system with one AI teammate</p>
+          <p>A full-stack system that runs the rental lifecycle end to end: leases, rent schedules, Paytm payments, maintenance and audit. The AI layer is a ten-node LangGraph graph over fourteen typed tools, so every action an owner or tenant asks for resolves through validated domain operations rather than free text. Voice input is handled for Indian languages.</p>
+        </div>
+        <div class="side">
+          <div class="blk"><span class="lab">Stack</span>Next.js 16, TypeScript, LangGraph, Prisma, Supabase Postgres</div>
+          <div class="blk"><span class="lab">Access</span>Server-side RBAC and ABAC policy layer</div>
+          <div class="blk"><span class="lab">Links</span><a href="https://havendex.vercel.app" rel="noopener">Live site</a> &middot; <a href="https://github.com/Tirumala2824/paytmai" rel="noopener">Source</a></div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <span class="entry-num">02</span>
+        <div>
+          <h3>BlueberryChain OS</h3>
+          <p class="kicker">Recovering value from cold chain breaks</p>
+          <p>A control tower for perishable cold chains. Sensor excursions trigger detection with no human prompt, every recovery option is priced against doing nothing, and AI agents are called only where judgement is actually needed. Each decision carries a hash-chained ledger and replayable evidence, and executes through one gateway into SAP and the carrier system. Running live on Google Cloud Run.</p>
+        </div>
+        <div class="side">
+          <div class="blk"><span class="lab">Stack</span>Python, Snowflake, Google Cloud Run, CI/CD from dev</div>
+          <div class="blk"><span class="lab">Links</span><a href="https://blueberrychain-control-tower-1061285537090.europe-west1.run.app/" rel="noopener">Control tower</a> &middot; <a href="https://github.com/Tirumala2824/blueberrychain" rel="noopener">Source</a></div>
+          <div class="blk"><span class="lab">Note</span>Opens with an access code, listed in the repo README</div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <span class="entry-num">03</span>
+        <div>
+          <h3>Truestate</h3>
+          <p class="kicker">Evidence-bound vendor reviews</p>
+          <p>An operations console for supplier payment and vendor change reviews shared by finance, security and legal. Four Google ADK specialists do the first pass, then people work a queue of evidence gaps and exceptions instead of a chat window. Every decision stays tied to the document that justified it, and a decision on its own never claims a payment was held or released.</p>
+        </div>
+        <div class="side">
+          <div class="blk"><span class="lab">Stack</span>FastAPI, React, Gemini on Vertex AI, Document AI, BigQuery, Cloud SQL, Cloud Run</div>
+          <div class="blk"><span class="lab">Design note</span>Deliberately no general chat surface</div>
+          <div class="blk"><span class="lab">Status</span>Built and documented. Cloud deployment awaits project setup, so the GCP run is not yet verified end to end.</div>
+          <div class="blk"><span class="lab">Links</span><a href="https://github.com/Tirumala2824/truestate" rel="noopener">Source</a></div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <span class="entry-num">04</span>
+        <div>
+          <h3>Contract Risk Analyzer</h3>
+          <p class="kicker">Six risk domains, one readable verdict</p>
+          <p>Reviews contracts across legal, compliance, financial, operational, security and fraud risk. Rule-based scoring and Bayesian reasoning run alongside optional LLM analysis, and the output is a structured assessment with an audit trail rather than a paragraph of opinion. Review time on the sample set fell by <span class="metric">70%</span>.</p>
+        </div>
+        <div class="side">
+          <div class="blk"><span class="lab">Stack</span>Python, FastAPI, multi-agent scoring, MongoDB, Azure OpenAI</div>
+          <div class="blk"><span class="lab">Links</span><a href="https://github.com/Tirumala2824/contract-risk-analyzer" rel="noopener">Source</a></div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <span class="entry-num">05</span>
+        <div>
+          <h3>CredX</h3>
+          <p class="kicker">Early warning on borrower distress</p>
+          <p>A credit monitoring workspace that watches for accounts turning before they default: repayment delay, missed payments, exposure and cash-flow signals, combined by configurable rules and saved models. Built to be read by a credit officer, so every assessment shows the indicators behind it and records the analyst's follow-up.</p>
+        </div>
+        <div class="side">
+          <div class="blk"><span class="lab">Stack</span>FastAPI, Astro, scikit-learn</div>
+          <div class="blk"><span class="lab">Status</span>Experimental, signals for human review only</div>
+          <div class="blk"><span class="lab">Links</span><a href="https://github.com/Tirumala2824/CredX" rel="noopener">Source</a></div>
+        </div>
+      </article>
+
+      <p class="archive">
+        <span class="lab">Also on GitHub</span>
+        <a href="https://github.com/Tirumala2824/Comparative-Evaluation-Of-CNN" rel="noopener">CNN comparison for bottle defect detection</a> &middot;
+        <a href="https://github.com/Tirumala2824/revenue_dashboard" rel="noopener">Revenue dashboard</a> &middot;
+        <a href="https://github.com/Tirumala2824/Cross-sell-prediction" rel="noopener">Cross-sell prediction</a> &middot;
+        <a href="https://github.com/Tirumala2824/Email-Spam-Detection" rel="noopener">Email spam detection</a> &middot;
+        <a href="https://github.com/Tirumala2824/Air-Quality-Detection" rel="noopener">Air quality detection</a> &middot;
+        <a href="https://github.com/Tirumala2824/BCD-to-Seven-Segment-Display" rel="noopener">BCD to seven segment display</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="experience-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <h2 id="experience-h">Where I have <em>worked</em></h2>
+      </div>
+
+      <div class="role">
+        <div class="role-when"><span>Oct 2024</span><span>to present</span></div>
+        <div>
+          <h3>AI Engineer</h3>
+          <p class="org">NTT DATA Business Solutions, Bengaluru</p>
+          <ul class="points">
+            <li>Built an enterprise natural-language-to-SQL analytics app, so business users ask a question and get the query, the result and an explanation. Retrieval, prompt preparation, SQL generation and validation run through Azure OpenAI, LangChain and FAISS.</li>
+            <li>Designed LangGraph workflows where tools pick the right data source, validate the generated query and synthesise the answer, with a human in the loop before anything is committed.</li>
+            <li>Engineered supply chain data for analytics and ML in Microsoft Fabric and PySpark across Bronze, Silver and Gold layers, including cleansing, transformation and validation.</li>
+            <li>Developed <span class="metric">20+</span> Azure Data Factory pipelines for ingestion and transformation, with parameterisation, error handling, dependency control and monitoring.</li>
+            <li>Applied Delta Lake and Spark tuning (partitioning, Z-ordering, OPTIMIZE, VACUUM) that cut analytical query latency by <span class="metric">40%</span>.</li>
+            <li>Shipped model serving on Azure ML and FastAPI with MLflow, XGBoost, experiment tracking, drift checks and a retraining path.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <div class="role-when"><span>Jul 2024</span><span>to Aug 2024</span></div>
+        <div>
+          <h3>Data Science Intern</h3>
+          <p class="org">Viai Solutions, Hyderabad</p>
+          <ul class="points">
+            <li>Wrote Python collectors that gathered web data, cleaned it and stored it as Parquet for downstream analysis.</li>
+            <li>Validated student datasets for duplicates and missing values with Pandas and PySpark, then built Tableau dashboards on exam performance and progression for <span class="metric">5,000+</span> students.</li>
+            <li>Prototyped local LLM workflows with Ollama.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <div class="role-when"><span>Jan 2024</span><span>to Jun 2024</span></div>
+        <div>
+          <h3>Python Developer</h3>
+          <p class="org">Dhanush Infotech, Hyderabad</p>
+          <ul class="points">
+            <li>Built Django REST Framework APIs with authentication, role-based access control, validation and PostgreSQL.</li>
+            <li>Reworked SQL queries, indexes and schema changes to improve API performance by <span class="metric">25%</span>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack" aria-labelledby="stack-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">04</span>
+        <h2 id="stack-h">What I <em>build with</em></h2>
+      </div>
+      <div class="stack-grid">
+        <div>
+          <h3>Models and orchestration</h3>
+          <p>Azure OpenAI, LangChain, LangGraph, LlamaIndex, Google ADK, prompt design, embeddings, Model Context Protocol.</p>
+        </div>
+        <div>
+          <h3>Retrieval</h3>
+          <p>FAISS, ChromaDB, Pinecone, hybrid BM25 and vector search, semantic chunking, reranking, grounded citations, RAGAS evaluation.</p>
+        </div>
+        <div>
+          <h3>Backend</h3>
+          <p>Python, async Python, FastAPI, Django REST, SQLAlchemy, Pytest, Docker, PostgreSQL and MongoDB.</p>
+        </div>
+        <div>
+          <h3>Data and ML</h3>
+          <p>PySpark, Microsoft Fabric, Azure Data Factory, Synapse, Delta Lake, ADLS Gen2, scikit-learn, XGBoost, MLflow, Azure ML.</p>
+        </div>
+        <div>
+          <h3>Platforms</h3>
+          <p>Azure and GCP, Cloud Run, Azure App Service, Azure DevOps pipelines, Supabase, Snowflake.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recognition" aria-labelledby="recognition-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">05</span>
+        <h2 id="recognition-h">Awards and <em>certifications</em></h2>
+      </div>
+      <div class="band">
+        <div>
+          <h3>Awards</h3>
+          <ol>
+            <li><span class="yr">2026</span><span>First place, Business AI Challenge 2026, Cohort 1</span></li>
+            <li><span class="yr">2025</span><span>Third place, JouleXet AI Hackathon</span></li>
+          </ol>
+        </div>
+        <div>
+          <h3>Certifications</h3>
+          <ul>
+            <li><span class="yr">DP-700</span><span>Microsoft Certified: Fabric Data Engineer Associate</span></li>
+            <li><span class="yr">AI-900</span><span>Microsoft Certified: Azure AI Fundamentals</span></li>
+            <li><span class="yr">2024</span><span>B.Tech, Computer Science and Engineering, IIIT Manipur</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h" class="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">06</span>
+        <h2 id="contact-h">Say <em>hello</em></h2>
+      </div>
+      <p>I am open to AI engineering roles where the system has to survive real users and real data. If you are building something in that space, email is the fastest way to reach me.</p>
+      <a class="bigmail" href="mailto:pdprasad1710@gmail.com">pdprasad1710@gmail.com</a>
+      <p class="elsewhere">
+        <a href="https://github.com/Tirumala2824" rel="me noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/tirumala569" rel="me noopener">LinkedIn</a>
+        <a href="docs/resume/ai-engineer-resume.pdf">R&eacute;sum&eacute;</a>
+        <a href="https://github.com/Tirumala2824/Tirumala2824" rel="noopener">This site's source</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="colophon wrap">
+  <p>Set in Newsreader and IBM Plex Mono. Built as a single HTML file, no framework, no tracking. Last revised November 2026.</p>
+  <p>&copy; 2026 Durga Prasad Pitani</p>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var buttons = document.querySelectorAll("[data-theme-set]");
+    var stored = null;
+    try { stored = window.localStorage.getItem("theme"); } catch (e) { stored = null; }
+    var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var current = stored === "paper" || stored === "ink" ? stored : (prefersDark ? "ink" : "paper");
+
+    function apply(mode) {
+      current = mode;
+      root.setAttribute("data-theme", mode);
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].setAttribute("aria-pressed", buttons[i].getAttribute("data-theme-set") === mode ? "true" : "false");
+      }
+      try { window.localStorage.setItem("theme", mode); } catch (e) {}
+    }
+
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function () {
+        apply(this.getAttribute("data-theme-set"));
+      });
+    }
+
+    apply(current);
+  })();
+</script>
+</body>
+</html>
